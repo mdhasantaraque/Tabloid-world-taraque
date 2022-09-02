@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabloid World</title>
     <!-- ----------Tailwind-------------->
-    
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
 
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-
+    <style>
+      .li-field{
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    </style>
 </head>
 
 <body class="p-10">
@@ -37,12 +41,13 @@
   </header>
   <main>
       <div class="text-center">
-        <ul class="menu menu-vertical md:menu-horizontal  bg-base-100 rounded-box font-medium">
-          <li><a>Item 1</a></li>
+        <ul id="categories-field" class="menu menu-horizontal menu-lg-horizontal bg-base-100 rounded-box font-medium">
+          <!-- <li><a>Item 1</a></li>
           <li><a>Item 2</a></li>
-          <li><a>Item 3</a></li>
+          <li><a>Item 3</a></li> -->
         </ul>
       </div>
+      
   </main>
     
     <script src="js/tabloid.js"></script>
