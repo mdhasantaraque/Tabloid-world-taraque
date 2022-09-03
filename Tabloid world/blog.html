@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabloid World</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+</head>
+    <body class="px-24">
+        <header>
+            <div class="navbar bg-base-100 border-b-2 mb-6">
+                <div class="flex-1">
+                <a class="normal-case font-medium text-indigo-500 text-xl"><span class="bg-indigo-500 text-white rounded-md p-1 ">Tabloid</span> World</a>
+                </div>
+                <div>
+                <a class="font-medium text-indigo-500" href="index.html">News</a>
+                </div>
+                <div class="mx-6">
+                <a class="font-medium text-indigo-500" href="blog.html">Blog</a>
+                </div>
+                <div class="dropdown dropdown-end">
+                <label tabindex="0" class="btn-circle avatar">
+                    <div class="w-10 rounded-full">
+                    <img src="https://placeimg.com/80/80/people" />
+                    </div>
+                </label>
+                </div>
+            </div>
+        </header>
+        
+    <main class="mt-4">
+        <section>
+            <div class="card lg:card-side mb-4 bg-base-100 border border-current shadow-xl">
+                <div class="card-body">
+                  <h2 class="card-title">01. What is difference of var, let & const?</h2>
+                  <p><strong>Var: </strong> Hosted top of global scope. Can be use before declarations. We can re declare it in the same scope.</p>
+                  <p><strong>Let: </strong> Hosted at top of some private scope and only available after assigning value. Block scope always. start to end of the current scope anywhere. We cannot declare it in the same scope </p>
+                  <p><strong>Const:</strong>  Hosted at top of some private scope and only available after assigning value. Block scope always. start to end of the current scope anywhere. We can't redeclare or reinitialize it.</p>
+                  
+                </div>
+            </div>
+            <div class="card lg:card-side mb-4 bg-base-100 border border-current shadow-xl">
+                <div class="card-body">
+                  <h2 class="card-title">02. Difference between regular funtion and arrow function?</h2>
+                  <p>The first and most obvious difference between arrow functions and regular functions is their syntax. Not only do they look different, but arrow functions also provide an implicit return shorthand and allow parenthesis around a single argument to be omitted.This depends on how the function was invoked, On the other hand, an arrow function does not define its own execution context.Regular functions can be used as constructors, using the new keyword. Yet another consequence of the lexical resolution of this inside arrow functions is that they cannot be used as constructors. Using new with an arrow function results in a TypeError.Another difference is the binding of the arguments object. Unlike regular functions, arrow functions don't have their own arguments object. A modern alternative that circumvents this limitation is the usage of rest parameters.</p>
+                  
+                </div>
+            </div>
+            <div class="card lg:card-side mb-4 bg-base-100 border border-current shadow-xl">
+                <div class="card-body">
+                    <div>
+                        <h2 class="card-title">03. What is differences of map, forEach, filter & find?</h2>
+                        <p><strong>Map</strong>function is a manipulative function that can modify each element's content in an array that it is called on. This function returns a new array with modified values. This function is useful for adding a little change to an already existing array, for example adding a property to an object or modifying it. Its construction and use are identical to the previous function forEach() and both can be used interchangeably.</p>
+                    </div>
+                    <div>
+                        <p><strong>forEach</strong>function is another form of just a plain for loop that can be used to iterate through array items. This case of a function is used for more complex arrays, for example, an array of objects with a lot of entries than just an array of integers.</p>
+                    </div>
+                  
+                 <div>
+                    <p><strong>Filter</strong>function is a search function that returns all the elements that fulfil the assigned condition. You can search by simple terms, for example, that element is equal to a certain integer, or by more advanced terms, for example, searching for an object with certain property that is equal to something. Both examples have a very frequent use as a developer.</p>
+                 </div>
+                 <div>
+                    <p><strong>Find</strong>function is also a search function like the previous but they differ in one small detail — this function returns only one match in an array. If in an array is more than one result, the function will return the first that has matched.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card lg:card-side mb-4 bg-base-100 border border-current shadow-xl">
+                <div class="card-body">
+                  <h2 class="card-title">04. hat is the advantages to use template string in javascript?</h2>
+                  <p>JavaScript has never had an elegant way of handling string until the launch of ES6. ES6 introduces something know as template literals, which enable JavaScript to handle multiples lines of strings more efficiently and elegantly.Template literals do not intend to add additional functionality to the existing JavaScript stings but try to solve the problem in a new way. Multiline strings have always been a problem pre ES6 because the strings were declared using double quotes and single quotes. This was a problem because when you are declaring strings using double quotes or single quotes, the stings must completely be contained in a single line.With template literals, it's super clean and easy. The trim function has been used to get rid of the empty space before the div tag and is not mandatory.</p>
+                  
+                </div>
+        </section>
+    </main>
+    <script src="js/tabloid.js"></script>
+        
+    </body>
+
+            
+</html>
