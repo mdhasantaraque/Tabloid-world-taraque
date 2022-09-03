@@ -99,7 +99,7 @@ const allModals = modals =>{
                 <input type="checkbox" id="my-modal-6" class="modal-toggle"/>
                 <div class="modal modal-bottom sm:modal-middle">
                         <div class="modal-box">
-                                <h3 class="font-bold text-lg">C${modal.title}</h3>
+                                <h3 class="font-bold text-lg">${modal.title}</h3>
                                 <p class="py-4">${modal.details}</p>
                                 <div class="card-actions flex justify-between px-6">
                                 <div class="flex items-center">
