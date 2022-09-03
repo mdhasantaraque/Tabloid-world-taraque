@@ -7,7 +7,7 @@ const loadCategories= () =>{
 }
 
 const setMenu = (categories) =>{
-        const categoriesField = document.getElementById('categories-field')
+        const categoriesField = document.getElementById('categories-field');
         for(const category of categories){
                 const li = document.createElement('li');
                 li.classList.add('li-field');
@@ -15,7 +15,9 @@ const setMenu = (categories) =>{
                        <button onclick="newsLoads('${category.category_id}')"> ${category.category_name}</button>
                 `
                 categoriesField.appendChild(li);
+                
         }
+        
 }
 loadCategories();
 
@@ -32,6 +34,7 @@ const newsLoads = (code) =>{
 
 const newsSection = allNews =>{
         const newsField = document.getElementById('news-field');
+        loadSpinner(true);
         const totalArticles = document.getElementById('total-articles')
         totalArticles.innerText = allNews.length;
         newsField.innerHTML ='';
@@ -73,6 +76,7 @@ const newsSection = allNews =>{
         </div>
         `
         newsField.appendChild(newsDiv);
+        loadSpinner(false)
 
         })
 }
@@ -88,7 +92,7 @@ const displayModalField = idNo =>{
 const allModals = modals =>{
         // console.log(modals);
         const modalSection = document.getElementById('modal-section');
-        for(const modal of modals){
+        modals.forEach(modal =>{
                 // console.log(modal);
                 const modalDiv = document.createElement('div')
                 modalDiv.innerHTML =`
@@ -117,7 +121,18 @@ const allModals = modals =>{
                 </div>
                 `
                 modalSection.appendChild(modalDiv);
-        }
+        })
                 
       
+}
+/*------- spinner section-----------*/
+
+const loadSpinner = isLoading =>{
+        const displaySpinner = document.getElementById('display-spinner');
+        if(isLoading){
+                displaySpinner.classList.remove('hidden');
+        }
+        else{
+                displaySpinner.classList.add('hidden')
+        }
 }
