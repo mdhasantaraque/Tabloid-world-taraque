@@ -46,7 +46,7 @@ const newsSection = allNews =>{
                 <div class="card-body">
                         <h2 class="card-title">${news.title}</h2>
                         <div class="h-28 p-4  text-ellipsis overflow-hidden">
-                           <p>${news.details}</p>
+                           <p>${news.details.slice(0,300)}</p>
                         </div>
                         
                         <div class="card-actions flex justify-between px-6">
@@ -92,6 +92,7 @@ const displayModalField = idNo =>{
 const allModals = modals =>{
         // console.log(modals);
         const modalSection = document.getElementById('modal-section');
+        loadSpinner(true);
         modals.forEach(modal =>{
                 // console.log(modal);
                 const modalDiv = document.createElement('div')
@@ -121,6 +122,7 @@ const allModals = modals =>{
                 </div>
                 `
                 modalSection.appendChild(modalDiv);
+                loadSpinner(false)
         })
                 
       
