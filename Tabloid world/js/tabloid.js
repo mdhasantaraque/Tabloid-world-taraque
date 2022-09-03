@@ -49,13 +49,13 @@ const newsSection = allNews =>{
                                         </div>
                                         </label>
                                         <div>
-                                        <strong>${news.author.name == 'system'? 'Not found name':news.author.name }</strong><br>
+                                        <strong>${news.author.name === 'system'? 'No data ava ilable':news.author.name }</strong><br>
                                         <span>${news.author.published_date}</span>
                                         </div>
                                 </div>
                                 <div>
-                                        <h5 class:"inline-block">View</h5>
-                                        <p>${news.total_view}</P>
+                                        <h1 class="font-medium inline">View </h1>
+                                        <p class="inline font-medium"> ${news.total_view === 0?' No data ava ilable':news.total_view }</P>
 
                                 </div>
                                 <div>
