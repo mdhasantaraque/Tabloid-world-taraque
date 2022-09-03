@@ -26,6 +26,7 @@ const newsLoads = () =>{
         .then(data => newsSection(data.data))
 }
 
+
 const newsSection = allNews =>{
         const newsField = document.getElementById('news-field');
         allNews.forEach(news =>{
@@ -35,11 +36,33 @@ const newsSection = allNews =>{
         <div class="card lg:card-side bg-base-100 shadow-xl my-6">
                 <figure><img src="${news.thumbnail_url}" alt="Album"></figure>
                 <div class="card-body">
-                        <h2 class="card-title">New album is released!</h2>
-                        <p>Click the button to listen on Spotiwhy app.</p>
-                        <div class="card-actions justify-end">
-                                <button class="btn btn-primary">Listen</button>
+                        <h2 class="card-title">${news.title}</h2>
+                        <div class="h-28 p-4 text-ellipsis overflow-hidden">
+                           <p>${news.details}</p>
                         </div>
+                        
+                        <div class="card-actions flex justify-between px-6">
+                                <div class="flex items-center">
+                                        <label tabindex="0" class="btn-circle avatar">
+                                        <div class="w-10 rounded-full">
+                                                 <img src="${news.author.img}" />
+                                        </div>
+                                        </label>
+                                        <div>
+                                        <strong>${news.author.name == 'system'? 'Not found name':news.author.name }</strong><br>
+                                        <span>${news.author.published_date}</span>
+                                        </div>
+                                </div>
+                                <div>
+                                        <h5 class:"inline-block">View</h5>
+                                        <p>${news.total_view}</P>
+
+                                </div>
+                                <div>
+                                        <button class="btn btn-primary">Details</button>
+                                </div>
+                        </div>
+
                 </div>
         </div>
         `
