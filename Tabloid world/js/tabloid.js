@@ -34,6 +34,9 @@ const newsLoads = (code) =>{
 
 const newsSection = allNews =>{
         const newsField = document.getElementById('news-field');
+        const totalArticles = document.getElementById('total-articles')
+        totalArticles.innerText = allNews.length;
+
         newsField.innerHTML ='';
         allNews.forEach(news =>{
                 // console.log(news);
@@ -55,13 +58,13 @@ const newsSection = allNews =>{
                                         </div>
                                         </label>
                                         <div>
-                                        <strong>${news.author.name == null? 'No data available':news.author.name }</strong><br>
+                                        <strong>${news.author.name == null || news.author.name == ''? 'No data available':news.author.name }</strong><br>
                                         <span>${news.author.published_date}</span>
                                         </div>
                                 </div>
                                 <div>
                                         <h1 class="font-medium inline">View </h1>
-                                        <p class="inline font-medium"> ${news.total_view === 0 ||news.total_view == null ?' No data available':news.total_view }</P>
+                                        <p class="inline font-medium"> ${news.total_view == null ||news.total_view == '' ? ' No data available' : news.total_view }</P>
 
                                 </div>
                                 <div>
@@ -76,4 +79,4 @@ const newsSection = allNews =>{
 
         })
 }
-// newsLoads();
+newsLoads(' ');
